@@ -44,37 +44,35 @@
                 </div>
             </div>
         </nav>
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <img class="card-img-top" src="{% static 'core/img/logo1.png' %}" alt="Suitech" width="500" height="450"/>
-                    <p class="lead fw-normal text-white-50 mb-0">Periféricos Gamer a precios más baratos</p>
-                </div>
-            </div>
-        </header>
-        <!-- Section-->
-        <section class="py-5">
+        <!-- Popular Items-->
+        <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="popularproducts text-center">Productos Populares!</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- New badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo!</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="{% static 'core/img/blake1.jpg' %}" alt="Blake 1" width="300" height="400"/>
+                            <img class="card-img-top" src="{% static 'core/img/Helios 1.jpg' %}" alt="Mcm2" width="300" height="400"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Mouse Blake X17 Pro</h5>
+                                    <h5 class="fw-bolder">Mouse Helios UX3</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
                                     <!-- Product price-->
-                                    $34.990
+                                    44.990
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="blake">Ver Más...</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'helios' %}">Ver más...</a></div>
                             </div>
                         </div>
                     </div>
@@ -98,52 +96,20 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span>$24.990</span>
+                                    $24.990
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="fireflyxl">Ver Más...</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'fireflyxl' %}">Ver más...</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Ofertazo</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="{% static 'core/img/Lumi 1.jpg' %}" alt="Webcam 1" width="300" height="400" />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Luminous C30</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$49.990</span>
-                                    $42.990
-                                    
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="lc30">Ver Más...</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
+         <!-- Footer-->
+         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; SuiTech 2021</p></div>
         </footer>
         <!-- Bootstrap core JS-->
