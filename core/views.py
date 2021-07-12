@@ -1,4 +1,7 @@
+
 from django.shortcuts import render
+from .models import Contacto
+from .forms import ContactoForm
 
 # Create your views here.
 def home(request):
@@ -30,3 +33,6 @@ def allp(request):
 
 def about(request):
     return render(request, 'core/about.html')
+
+def contact(request):
+    return render(request, 'core/contact.html')

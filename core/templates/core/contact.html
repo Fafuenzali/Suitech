@@ -16,6 +16,8 @@
 
         <style>
         </style>
+        <script type = >
+        </script>
     </head>
     <body>
         <!-- Navigation-->
@@ -50,12 +52,40 @@
         </nav>
         <section>
             <h1>SuiTech Store</h1>
-            <h7>Somos una pyme creada con el bojetivo de distribuir productos gamer de buena calidad a un precio que el retail común,
-                pudiendo así dar acceso a estos productos a una mayor cantidad de personas</h7>
-                <!-- Instagram -->
-                <a class="btn btn-primary" style="background-color: #ac2bac;" href="https://www.instagram.com/suitech.cl/" role="button"><i class="fab fa-instagram">
-                    Instagram
-                </i></a>
+            <form method="ContactoForm">
+                {% csrf_token %}
+                {{ form.as_p}}
+                <fieldset>
+                    <legend>Datos Personales</legend>
+    
+                    <label for="nombre">Nombre: (*)</label>
+                    <input id="nombre" name="nombre" type="text" required>
+                    <br>
+    
+                    <label for="apellidos">Apellidos: (*)</label>
+                    <input id="apellidos" name="apellidos" type="text" required>
+                    <br>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+    
+                    <label for="email">Correo electrónico: (*)</label>
+                    <input id="email" name="email" type="email" required>
+                    <br>
+    
+                    <label for="telefono">Teléfono:</label>
+                    <input id="telefono" name="telefono" type="tel">
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Mensaje, consulta o sugerencia</legend>
+                    <label for="mensaje">(*)</label>
+                    <textarea id="mensaje" name="mensaje" cols="30" rows="6" required></textarea>
+                </fieldset>
+                <button id="enviar" name="enviar" type="submit">Enviar datos</button>
+                <button type="reset">Limpiar campos</button>
+            </form>
         </section> 
  <!-- Footer-->
  <footer class="py-5 bg-dark" id="pie">
