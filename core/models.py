@@ -24,6 +24,6 @@ class Contacto(models.Model):
     Telefono = models.CharField(max_length=12, verbose_name="Telefono")
     Mensaje =models.CharField(max_length=120, verbose_name="Mensaje")
     FechaEnvio =models.DateField(("Date"), default=datetime.date.today)
-
+    
     def __str__(self):
         return self.ID

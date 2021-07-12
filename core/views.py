@@ -1,6 +1,5 @@
 
 from django.shortcuts import render
-from .models import Contacto
 from .forms import ContactoForm
 
 # Create your views here.
@@ -35,4 +34,11 @@ def about(request):
     return render(request, 'core/about.html')
 
 def contact(request):
-    return render(request, 'core/contact.html')
+    form = ContactoForm()
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+    context = {'form':form}
+    return render(request, 'core/contact.html', context)
